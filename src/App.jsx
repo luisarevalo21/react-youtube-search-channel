@@ -25,7 +25,6 @@ function App() {
             return;
           }
           const videos = items.map(video => {
-            console.log("video after fetch", video);
             return {
               id: video.id.videoId,
               description: video.snippet.description,
@@ -49,7 +48,6 @@ function App() {
   };
 
   const videoItems = videos.map(video => {
-    console.log("video id", video.id);
     return <VideoItem key={video.id} title={video.title} image={video.image} videoId={video.id} />;
   });
 
